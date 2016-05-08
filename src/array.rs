@@ -21,6 +21,6 @@ fn main() {
     analyze_slice(&xs);
 
     println!("borrow a section of the array as a slice");
-    analyze_slice(&ys[1 .. 4]);
+    analyze_slice(&ys[1..4]);
     println!("{}", xs[5]);
 }

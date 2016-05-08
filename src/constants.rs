@@ -10,7 +10,13 @@ fn main() {
 
     println!("This is {}", LANGUAGE);
     println!("The threshold is {}", THRESHOLD);
-    println!("{} is {}", n, if is_big(n) { "big" } else { "small" });
+    println!("{} is {}",
+             n,
+             if is_big(n) {
+                 "big"
+             } else {
+                 "small"
+             });
 
     // THRESHOLD = 5;
 }

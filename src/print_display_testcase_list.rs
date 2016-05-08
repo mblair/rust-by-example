@@ -13,7 +13,9 @@ impl fmt::Display for List {
         for (count, v) in vec.iter().enumerate() {
             // For every element except the first, add a comma
             // before calling `write!`. Use `try!` to return on errors.
-            if count != 0 { try!(write!(f, ", ")); }
+            if count != 0 {
+                try!(write!(f, ", "));
+            }
             try!(write!(f, "{}", v));
         }
 
