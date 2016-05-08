@@ -4,13 +4,13 @@ struct Pair(i32, f64);
 
 struct Point {
     x: f64,
-    y: f64
+    y: f64,
 }
 
 #[allow(dead_code)]
 struct Rectangle {
     p1: Point,
-    p2: Point
+    p2: Point,
 }
 
 fn main() {
