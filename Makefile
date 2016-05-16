@@ -12,6 +12,9 @@ build: $(OBJS)
 clean:
 	rm -f $(ALL_OBJS)
 
+rustfmt:
+	rustfmt $(SRCS)
+
 $(OBJS): %: $(DESTDIR)/%
 
 $(DESTDIR)/%:
