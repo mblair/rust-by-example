@@ -24,12 +24,12 @@ fn main() {
     let point = origin();
     let rectangle = Rectangle {
         p1: origin(),
-        p2: Point { x: 3.0, y: 4.0 }
+        p2: Point { x: 3.0, y: 4.0 },
     };
 
     let boxed_rectangle = Box::new(Rectangle {
         p1: origin(),
-        p2: origin()
+        p2: origin(),
     });
 
     let boxed_point = Box::new(origin());
