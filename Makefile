@@ -13,7 +13,7 @@ clean:
 	rm -f $(ALL_OBJS)
 
 rustfmt:
-	rustfmt $(SRCS)
+	rustfmt --write-mode=overwrite $(SRCS)
 
 $(OBJS): %: $(DESTDIR)/%
 
