@@ -5,7 +5,7 @@ DESTDIR=artifacts
 GITROOT=$(shell git rev-parse --show-toplevel)
 SRCS = $(wildcard $(GITROOT)/$(SRCDIR)/*.rs)
 OBJS = $(basename $(notdir $(SRCS)))
-ALL_OBJS=$(shell find $(DESTDIR) -type f)
+-ALL_OBJS=$(shell find $(DESTDIR) -type f)
 
 build: $(OBJS)
 
