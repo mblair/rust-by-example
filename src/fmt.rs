@@ -10,16 +10,8 @@ struct City {
 
 impl Display for City {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
-        let lat_c = if self.lat >= 0.0 {
-            'N'
-        } else {
-            'S'
-        };
-        let lon_c = if self.lon >= 0.0 {
-            'E'
-        } else {
-            'W'
-        };
+        let lat_c = if self.lat >= 0.0 { 'N' } else { 'S' };
+        let lon_c = if self.lon >= 0.0 { 'E' } else { 'W' };
 
         write!(f,
                "{}: {:.3}º{} {:.3}º{}",
@@ -54,7 +46,7 @@ fn main() {
                      lat: 49.25,
                      lon: -123.1,
                  }]
-                    .iter() {
+        .iter() {
         println!("{}", *city);
     }
     for color in [Color {
@@ -72,7 +64,7 @@ fn main() {
                       green: 0,
                       blue: 0,
                   }]
-                     .iter() {
+        .iter() {
         println!("{:?}", *color)
     }
 }

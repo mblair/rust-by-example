@@ -5,10 +5,7 @@ enum Person {
     Scientist,
     Height(i32),
     Weight(i32),
-    Info {
-        name: String,
-        height: i32,
-    },
+    Info { name: String, height: i32 },
 }
 
 fn inspect(p: Person) {
