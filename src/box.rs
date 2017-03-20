@@ -28,9 +28,9 @@ fn main() {
     };
 
     let boxed_rectangle = Box::new(Rectangle {
-        p1: origin(),
-        p2: origin(),
-    });
+                                       p1: origin(),
+                                       p2: origin(),
+                                   });
 
     let boxed_point = Box::new(origin());
 

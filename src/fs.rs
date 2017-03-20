@@ -36,24 +36,25 @@ fn main() {
 
     println!("`echo hello > a/b.txt`");
     echo("hello", &Path::new("a/b.txt")).unwrap_or_else(|why| {
-        println!("! {:?}", why.kind());
-    });
+                                                            println!("! {:?}", why.kind());
+                                                        });
 
     println!("`mkdir -p a/b/c/d`");
     fs::create_dir_all("a/c/d").unwrap_or_else(|why| {
-        println!("! {:?}", why.kind());
-    });
+                                                   println!("! {:?}", why.kind());
+                                               });
 
     println!("`touch a/c/e.txt`");
     touch(&Path::new("a/c/e.txt")).unwrap_or_else(|why| {
-        println!("! {:?}", why.kind());
-    });
+                                                      println!("! {:?}", why.kind());
+                                                  });
 
     println!("`ln -s ../b.txt a/c/b/.txt`");
     if cfg!(target_family = "unix") {
         unix::fs::symlink("../b.txt", "a/c/b.txt").unwrap_or_else(|why| {
-            println!("! {:?}", why.kind());
-        });
+                                                                      println!("! {:?}",
+                                                                               why.kind());
+                                                                  });
     }
 
     println!("`cat a/c/b.txt`");
@@ -74,11 +75,11 @@ fn main() {
 
     println!("`rm a/c/e.txt`");
     fs::remove_file("a/c/e.txt").unwrap_or_else(|why| {
-        println!("! {:?}", why.kind());
-    });
+                                                    println!("! {:?}", why.kind());
+                                                });
 
     println!("`rmdir a/c/d`");
     fs::remove_dir("a/c/d").unwrap_or_else(|why| {
-        println!("! {:?}", why.kind());
-    });
+                                               println!("! {:?}", why.kind());
+                                           });
 }

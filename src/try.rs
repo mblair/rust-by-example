@@ -44,10 +44,10 @@ mod checked {
         match op_(x, y) {
             Err(why) => {
                 panic!(match why {
-                    MathError::NegativeLogarithm => "logarithm of negative number",
-                    MathError::DivisionByZero => "division by zero",
-                    MathError::NegativeSquareRoot => "square root of negative number",
-                })
+                           MathError::NegativeLogarithm => "logarithm of negative number",
+                           MathError::DivisionByZero => "division by zero",
+                           MathError::NegativeSquareRoot => "square root of negative number",
+                       })
             }
             Ok(value) => println!("{}", value),
         }

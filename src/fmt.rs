@@ -46,7 +46,7 @@ fn main() {
                      lat: 49.25,
                      lon: -123.1,
                  }]
-        .iter() {
+                .iter() {
         println!("{}", *city);
     }
     for color in [Color {
@@ -64,7 +64,7 @@ fn main() {
                       green: 0,
                       blue: 0,
                   }]
-        .iter() {
+                .iter() {
         println!("{:?}", *color)
     }
 }
