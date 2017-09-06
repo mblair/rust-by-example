@@ -28,30 +28,42 @@ fn main() {
     };
 
     let boxed_rectangle = Box::new(Rectangle {
-                                       p1: origin(),
-                                       p2: origin(),
-                                   });
+        p1: origin(),
+        p2: origin(),
+    });
 
     let boxed_point = Box::new(origin());
 
     let box_in_a_box = Box::new(boxed_origin());
 
-    println!("Point occupies {} bytes in the stack",
-             mem::size_of_val(&point));
+    println!(
+        "Point occupies {} bytes in the stack",
+        mem::size_of_val(&point)
+    );
 
-    println!("Rectangle occupies {} bytes in the stack",
-             mem::size_of_val(&rectangle));
+    println!(
+        "Rectangle occupies {} bytes in the stack",
+        mem::size_of_val(&rectangle)
+    );
 
-    println!("Boxed point occupies {} bytes in the stack",
-             mem::size_of_val(&boxed_point));
+    println!(
+        "Boxed point occupies {} bytes in the stack",
+        mem::size_of_val(&boxed_point)
+    );
 
-    println!("Boxed rectangle occupies {} bytes in the stack",
-             mem::size_of_val(&boxed_rectangle));
+    println!(
+        "Boxed rectangle occupies {} bytes in the stack",
+        mem::size_of_val(&boxed_rectangle)
+    );
 
-    println!("Boxed box occupies {} bytes in the stack",
-             mem::size_of_val(&box_in_a_box));
+    println!(
+        "Boxed box occupies {} bytes in the stack",
+        mem::size_of_val(&box_in_a_box)
+    );
 
     let unboxed_point = *boxed_point;
-    println!("Unboxed point occupies {} bytes in the stack",
-             mem::size_of_val(&unboxed_point));
+    println!(
+        "Unboxed point occupies {} bytes in the stack",
+        mem::size_of_val(&unboxed_point)
+    );
 }

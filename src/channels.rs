@@ -11,10 +11,10 @@ fn main() {
         let thread_tx = tx.clone();
 
         thread::spawn(move || {
-                          thread_tx.send(id).unwrap();
+            thread_tx.send(id).unwrap();
 
-                          println!("thread {} finished", id);
-                      });
+            println!("thread {} finished", id);
+        });
     }
 
     let mut ids = Vec::with_capacity(NTHREADS as usize);

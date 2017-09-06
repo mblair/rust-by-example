@@ -22,9 +22,11 @@ fn main() {
 
     let optional_float = Some(0f32);
 
-    println!("{:?} unwraps to {:?}",
-             optional_float,
-             optional_float.unwrap());
+    println!(
+        "{:?} unwraps to {:?}",
+        optional_float,
+        optional_float.unwrap()
+    );
 
     println!("{:?} unwraps to {:?}", none, none.unwrap());
 }

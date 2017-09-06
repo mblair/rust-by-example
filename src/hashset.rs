@@ -18,9 +18,13 @@ fn main() {
 
     println!("Difference: {:?}", a.difference(&b).collect::<Vec<&i32>>());
 
-    println!("Intersection: {:?}",
-             a.intersection(&b).collect::<Vec<&i32>>());
+    println!(
+        "Intersection: {:?}",
+        a.intersection(&b).collect::<Vec<&i32>>()
+    );
 
-    println!("Symmetric Difference: {:?}",
-             a.symmetric_difference(&b).collect::<Vec<&i32>>());
+    println!(
+        "Symmetric Difference: {:?}",
+        a.symmetric_difference(&b).collect::<Vec<&i32>>()
+    );
 }
